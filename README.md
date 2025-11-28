@@ -11,4 +11,10 @@ CEST / APT evaluation pipelines (Lorentzian fitting, MTRasym, AREX, deep learnin
 Multi-parametric mapping (VFA T1, MP2RAGE, ME-SE T2, MTsat)
 Hands-on notebooks with Big GABA, SLAK, Leeds CEST, and other public datasets
 
-Think of it as a living textbook + code sandbox. Everything is deliberately over-commented and broken into small steps so students and new researchers can understand exactly what’s happening at each stage.
+A platform for my own practice (Divakar Budda) of qMRI, hMRI, MRS, MRSI, CEST MRI datasets. 
+
+About me:
+
+I am a PhD candidate finalizing my thesis in Neuropsychopharmacology building mathematical quantitative systems pharmacology models for chronic pain, although the methods can be appied for other disorders as well. I have developed deep passion for non-invasive imaging methods particular qMRI, and MRS and hope to develop workflows to integrate CNS QSP models with non-invasive imaging to optimize treatment of CNS disorders. This repository is to practice skills, towards my goal of integrative workflows. a tiny step each day...
+
+- Divakar
