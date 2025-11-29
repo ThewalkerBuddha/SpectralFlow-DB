@@ -1,4 +1,50 @@
 # SpectralFlow-DB
+
+## FSL Workflow for MRI Analysis
+
+### Dataset
+
+This workflow uses the [OpenNeuro ds000102 dataset](https://github.com/OpenNeuroDatasets/ds000102).
+
+Clone locally for testing:
+```bash
+git clone https://github.com/OpenNeuroDatasets/ds000102.git data/ds000102
+```
+
+### Workflow
+
+The workflow automatically installs FSL, clones the dataset, and runs brain extraction on sub-01 T1 MRI data using FSL BET.
+
+Manual run:
+```bash
+bash scripts/fsl_preprocess.sh
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# SpectralFlow-DB
 Practice implementations &amp; tutorials for quantitative MRI and MR spectroscopy (MRS/MRSI/CEST) using public datasets.
 
 spectraflow-practice
