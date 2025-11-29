@@ -1,0 +1,23 @@
+name: FSL Preprocessing Workflow
+
+on: [push]
+
+jobs:
+  fsl-preprocessing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository content
+        uses: actions/checkout@v3
+
+      - name: Install FSL
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fsl
+
+      - name: Clone dataset
+        run: |
+          git clone https://github.com/OpenNeuroDatasets/ds000102.git data/ds000102
+
+      - name: Run FSL preprocessing script
+        run: |
+          bash scripts/fsl_preprocess.sh
