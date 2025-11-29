@@ -38,3 +38,14 @@ Install WSL/Ubuntu
       Extra parameters → paste this exactly: -ac -wgl (this made the glxgears to work)
       Finish and save the config as “WSL2” so you can just double-click it next time.
 # 3.3. Type glxgears into the Ubuntu shell, and press enter . A window with three spinning gears should open.
+
+
+# 4. Use the following lines of code in Ubuntu terminal everytime its opened new 
+
+# Fix the broken DISPLAY variable and point it to Windows
+export DISPLAY=$(ip route | awk '/default/ {print $3}'):0
+# or even simpler (works 99% of the time):
+# export DISPLAY=$(hostname).local:0
+
+# Now test
+glxgears
