@@ -1,4 +1,28 @@
 # SpectralFlow-DB
+
+## FSL Workflow for MRI Analysis
+
+### Dataset
+
+This workflow uses the [OpenNeuro ds000102 dataset](https://github.com/OpenNeuroDatasets/ds000102).
+
+Clone locally for testing:
+```bash
+git clone https://github.com/OpenNeuroDatasets/ds000102.git data/ds000102
+```
+
+### Workflow
+
+The workflow automatically installs FSL, clones the dataset, and runs brain extraction on sub-01 T1 MRI data using FSL BET.
+
+Manual run:
+```bash
+bash scripts/fsl_preprocess.sh
+```
+
+
+
+# SpectralFlow-DB
 Practice implementations &amp; tutorials for quantitative MRI and MR spectroscopy (MRS/MRSI/CEST) using public datasets.
 
 spectraflow-practice
@@ -10,11 +34,3 @@ MRSI reconstruction and metabolite mapping
 CEST / APT evaluation pipelines (Lorentzian fitting, MTRasym, AREX, deep learning baselines)
 Multi-parametric mapping (VFA T1, MP2RAGE, ME-SE T2, MTsat)
 Hands-on notebooks with Big GABA, SLAK, Leeds CEST, and other public datasets
-
-A platform for my own practice (Divakar Budda) of qMRI, hMRI, MRS, MRSI, CEST MRI datasets. 
-
-About me:
-
-I am a PhD candidate finalizing my thesis in Neuropsychopharmacology building mathematical quantitative systems pharmacology models for chronic pain, although the methods can be appied for other disorders as well. I have developed deep passion for non-invasive imaging methods particular qMRI, and MRS and hope to develop workflows to integrate CNS QSP models with non-invasive imaging to optimize treatment of CNS disorders. This repository is to practice skills, towards my goal of integrative workflows. a tiny step each day...
-
-- Divakar
