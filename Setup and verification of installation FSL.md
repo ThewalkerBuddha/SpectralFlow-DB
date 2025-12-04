@@ -40,9 +40,9 @@
 # 4. Logging in with user name and email id so the commits to github gets saved with username and email id
     # Getting the working directory
     pwd
-    # Logging in with username and email id
-git config --global user.name "Divakar Buddha"
-git config --global user.email "divakarbuddha@outlook.com"
+# 4.1 Logging in with username and email id
+    git config --global user.name "Divakar Buddha"
+    git config --global user.email "divakarbuddha@outlook.com"
 
 
 # 5. Use the following lines of code in Ubuntu terminal everytime its opened new 
