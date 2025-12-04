@@ -37,22 +37,31 @@
       #Finish and save the config as “WSL2” so you can just double-click it next time.
     3.3. #Type glxgears into the Ubuntu shell, and press enter . A window with three spinning gears should open.
 
-# 4. Testing the adapter connection
-    glxgears
-    #Should show three different colored (blue, gree, red) gears roatating)
+# 4. Logging in with user name and email id so the commits to github gets saved with username and email id
+    # Getting the working directory
+    pwd
+    # Logging in with username and email id
+git config --global user.name "Divakar Buddha"
+git config --global user.email "divakarbuddha@outlook.com"
+
+
 # 5. Use the following lines of code in Ubuntu terminal everytime its opened new 
     #Fix the broken DISPLAY variable and point it to Windows
     export DISPLAY=$(ip route | awk '/default/ {print $3}'):0
     #or even simpler (works 99% of the time):
     export DISPLAY=$(hostname).local:0
+    
+# 6. Testing the adapter connection
+    glxgears
+    #Should show three different colored (blue, gree, red) gears roatating)
 
-# 6. Verifying the installation and running status of FSL
+# 7. Verifying the installation and running status of FSL
     fslmaths
     #give information about datatype
 
-# 7. imcp - verifying the installation of FSL
+# 8. imcp - verifying the installation of FSL
     imcp
     #gives help text of imcp command
 
-# 8. FSL GUI through Ubuntu
+# 9. FSL GUI through Ubuntu
     fsl &
