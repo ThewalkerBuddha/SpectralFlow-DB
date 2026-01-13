@@ -1,0 +1,185 @@
+Neuroimaging Workflow Reference & Encyclopedia
+
+This is to be used as a single source of reference, to track my progress of how the essentials of Neuroimaging are mastered towards the core tools such as FSL, SPM, AFNI, etc. Its a work in progress, unless it clearly denotes its complete and ready.
+
+Purpose
+This workbook is now designed as a comprehensive, standalone reference for neuroimaging workflows, covering all major tools (FSL, SPM, AFNI, FreeSurfer, hMRI toolbox, MRS) and modalities (fMRI, qMRI, hMRI, MRS). It is structured to serve as a single encyclopedia that any researcher can consult to understand, learn, and apply neuroimaging analysis techniques end-to-end
+
+
+PART I — FOUNDATIONS
+1. MRI & Neuroimaging Basics
+
+1.1 MRI physics (T1, T2, T2*, PD, MT)
+1.2 Signal formation, noise, artifacts
+1.3 Spatial vs temporal resolution
+1.4 Functional vs structural MRI
+1.5 Neuroanatomy for imaging
+
+2. Experimental Design Principles
+
+2.1 Task-based and resting-state paradigms
+2.2 Block vs event-related designs
+2.3 Power, efficiency, and contrasts
+2.4 Confound modeling and nuisance variables
+
+3. Data Organization & Standards
+
+3.1 DICOM to NIfTI conversion
+3.2 BIDS specification and derivatives
+3.3 Metadata management
+3.4 Quality control and validation
+3.5 Data sharing and repositories
+
+PART II — PREPROCESSING WORKFLOWS
+4. Preprocessing Concepts
+
+4.1 Slice timing correction
+4.2 Motion correction
+4.3 Susceptibility distortion correction
+4.4 Spatial normalization
+4.5 Smoothing and filtering
+4.6 Preprocessing pitfalls
+
+5. Tool-Specific Pipelines
+
+FSL FEAT workflow
+
+SPM preprocessing pipeline
+
+AFNI preprocessing logic
+
+FreeSurfer cortical reconstruction
+
+PART III — ANALYSIS & STATISTICS
+6. First-Level Analysis (GLM)
+
+6.1 Design matrix specification
+6.2 HRF modeling
+6.3 Contrasts and interpretation
+6.4 Nuisance regressors
+
+7. Group-Level Analysis
+
+7.1 Fixed vs mixed-effects models
+7.2 Multiple comparisons
+7.3 Cluster vs voxelwise inference
+7.4 Bayesian approaches
+
+8. Functional Connectivity & ICA
+
+8.1 Resting-state analysis
+8.2 Independent Component Analysis
+8.3 Network interpretation
+8.4 Graph metrics
+
+PART IV — ADVANCED MODALITIES
+9. Quantitative MRI & hMRI
+
+9.1 R1, R2*, MT, PD maps
+9.2 Parameter estimation and interpretation
+9.3 hMRI toolbox workflow
+9.4 Clinical/translational applications
+
+10. Magnetic Resonance Spectroscopy (MRS)
+
+10.1 MEGA-PRESS sequence logic
+10.2 Quantification (LCModel, Osprey, SPM-MRS)
+10.3 Quality metrics and pitfalls
+10.4 Metabolite interpretation
+
+11. Diffusion MRI Overview
+
+11.1 DTI principles
+11.2 FA, MD metrics
+11.3 Tractography basics
+
+PART V — PYTHON-BASED PIPELINES
+12. Python Tools for Neuroimaging
+
+12.1 nibabel
+12.2 nilearn
+12.3 nipype
+12.4 pybids
+12.5 Data visualization and plotting
+
+13. Workflow Engineering
+
+13.1 Reproducible pipeline design
+13.2 Environment management (conda, virtualenv)
+13.3 Automation and HPC basics
+13.4 Containerization (Docker/Singularity)
+
+PART VI — MODULE-LEVEL WORKBOOK DESIGN
+
+Each module follows a standard structure for consistency and reproducibility:
+
+Learning objectives
+
+Core concepts
+
+Tool mapping
+
+Hands-on exercises
+
+Common mistakes
+
+Optional advanced tasks
+
+Deliverable (for GitHub)
+
+PART VII — WORKBOOK MODULE BREAKDOWN (EXAMPLES)
+
+Modules include, but are not limited to:
+
+MRI & fMRI Foundations
+
+Experimental Design & GLM Thinking
+
+BIDS & Data Engineering
+
+fMRI Preprocessing (Tool-Agnostic)
+
+First-Level & Group-Level GLM
+
+Resting-State & ICA
+
+Quantitative MRI & hMRI
+
+MRS
+
+Diffusion MRI
+
+Python Pipelines
+
+Reproducibility & Version Control
+
+Deliverables for each module include figures, notebooks, pipelines, and example datasets suitable for GitHub publication.
+
+PART VIII — GITHUB & PUBLICATION STANDARDS
+14. Repository Structure
+
+/docs – conceptual explanations
+
+/data – example datasets
+
+/code – pipelines/scripts
+
+/results – figures, processed outputs
+
+/notebooks – exploratory analyses
+
+15. Writing for a Broad Audience
+
+Clear READMEs
+
+Step-by-step instructions
+
+Reproducibility emphasis
+
+Citable and modular structure
+
+Outcome
+
+
+
+A portfolio-ready showcase of workflow mastery
