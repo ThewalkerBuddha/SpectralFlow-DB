@@ -51,6 +51,9 @@
         unset LIBGL_ALWAYS_INDIRECT   # if set
     4.4. #Type glxgears into the Ubuntu shell, and press enter . A window with three spinning gears should open.
 
+##################################################################################
+*** Steps 4.2 to 4.4 to be repeated everytime FSL is being used through Ubuntu ***
+##################################################################################
 # 5. Logging in with user name and email id so the commits to github gets saved with username and email id
     # Getting the working directory
     pwd
