@@ -20,36 +20,44 @@
     2.2. #In the Notepad window, enter the following text, and save the file. If [wsl2] is already present, don't add it again - just add guiApplications=false line         underneath [wsl2]:
           [wsl2]
           guiApplications=false
-# 3. X server
+# 3. Allocate enough RAM
+    This step is only required if you are using a computer with 8GB or less of RAM.
+    3.1. If you are using a computer with 8GB or less of RAM, you may need to perform some additional steps to ensure that enough RAM is allocated to the WSL subsystem.
+        Open a Windows PowerShell (as administrator) window, and type:
+        wsl --shutdown
+        notepad "$env:USERPROFILE/.wslconfig"
+        Notepad should open up a file named .wslconfig - enter the following lines into the file, and save it:
+            [wsl2]
+            memory=10GB # Limits VM memory to 10GB
+    3.2. Restart WSL/Ubuntu and confirm that the available RAM has increased by running this command:
+        free -mh
+        Due to how WSL2 works, you must close WSL (by running wsl --shutdown in a PowerShell window) between uses of FSL, to ensure RAM is freed up for your Windows sessions. You may            also wish to change the memory value in the .wslconfig file, e.g. to memory=4GB, if you experience degraded performance when using Windows applications
+# 4. X server
     #Though i am using WSL2 i still needed to install X server as otherwise the display connection did not work resulting in error "Error: couldn't open display 10.255.255.254:0"
-    3.1. #Download and run the installer from https://sourceforge.net/projects/vcxsrv/. This will install an application called XLaunch.
+    4.1. #Download and run the installer from https://sourceforge.net/projects/vcxsrv/. This will install an application called XLaunch.
     #In order for VcXsrv to work, Ubuntu configuration profile has to be moedified as follows. 
-    3.1.1 #for WS1, copy+paste the following code into the Ubuntu shell:
+    4.1.1 #for WS1, copy+paste the following code into the Ubuntu shell:
           echo "export DISPLAY=:0" >> ~/.bashrc
-    3.1.2 #for WSL2 (my laptop), copy+paste the following code into the Ubuntu shell:
+    4.1.2 #for WSL2 (my laptop), copy+paste the following code into the Ubuntu shell:
           echo "export DISPLAY=\$(grep nameserver /etc/resolv.conf  | awk '{print \$2; exit}'):0" >> ~/.bashrc
           echo "export LIBGL_ALWAYS_INDIRECT=1" >> ~/.bashrc
-    3.2. Start the XLaunch app. 
-      #Display settings → Multiple windows
-      #Display number → 0 both work (setting 0 worked for me)
-      #Start no client → checked
-      #Extra parameters → paste this exactly: -ac -wgl (this made the glxgears to work)
+    4.2. Start the XLaunch app. 
+      # Display settings → Multiple windows
+      # Start no client → checked
+      # Native openGL → Unchecked (Deselected)
       #Finish and save the config as “WSL2” so you can just double-click it next time.
-    3.3. #Type glxgears into the Ubuntu shell, and press enter . A window with three spinning gears should open.
+    4.3. Copy+paste this code into Ubuntu terminal (WSL distribution) (My windows laptop has 2 GPUs with NVIDIA GEFORCE GTX 1650 Ti (Dedicated 4GB + Shared 8GB) + Intel UHD graphics                (Dedicated 128MB + Shared 8GB): The GPU automatically switches depending on underlying process demands
+        export DISPLAY=:0
+        unset LIBGL_ALWAYS_INDIRECT   # if set
+    4.4. #Type glxgears into the Ubuntu shell, and press enter . A window with three spinning gears should open.
 
-# 4. Logging in with user name and email id so the commits to github gets saved with username and email id
+# 5. Logging in with user name and email id so the commits to github gets saved with username and email id
     # Getting the working directory
     pwd
-# 4.1 Logging in with username and email id
+# 5.1 Logging in with username and email id
     git config --global user.name "Divakar Buddha"
     git config --global user.email "divakarbuddha@outlook.com"
 
-
-# 5. Use the following lines of code in Ubuntu terminal everytime its opened new 
-    #Fix the broken DISPLAY variable and point it to Windows
-    export DISPLAY=$(ip route | awk '/default/ {print $3}'):0
-    #or even simpler (works 99% of the time):
-    export DISPLAY=$(hostname).local:0
     
 # 6. Testing the adapter connection
     glxgears
