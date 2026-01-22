@@ -32,7 +32,7 @@
     3.2. Restart WSL/Ubuntu and confirm that the available RAM has increased by running this command:
         free -mh
         Due to how WSL2 works, you must close WSL (by running wsl --shutdown in a PowerShell window) between uses of FSL, to ensure RAM is freed up for your Windows sessions. You may            also wish to change the memory value in the .wslconfig file, e.g. to memory=4GB, if you experience degraded performance when using Windows applications
-# 4. X server
+# 4. X server (is no longer required, if used step 4.3 directly)
     #Though i am using WSL2 i still needed to install X server as otherwise the display connection did not work resulting in error "Error: couldn't open display 10.255.255.254:0"
     4.1. #Download and run the installer from https://sourceforge.net/projects/vcxsrv/. This will install an application called XLaunch.
     #In order for VcXsrv to work, Ubuntu configuration profile has to be moedified as follows. 
@@ -54,6 +54,12 @@
 ##################################################################################
 *** Steps 4.2 to 4.4 to be repeated everytime FSL is being used through Ubuntu ***
 ##################################################################################
+
+##################################################################################
+*** Steps 4.3 is to be repeated in Ubuntu everytime FSL is being used ***
+##################################################################################
+
+
 # 5. Logging in with user name and email id so the commits to github gets saved with username and email id
     # Getting the working directory
     pwd
