@@ -51,9 +51,9 @@
         unset LIBGL_ALWAYS_INDIRECT   # if set
     4.4. #Type glxgears into the Ubuntu shell, and press enter . A window with three spinning gears should open.
 
-##################################################################################
+###################################################################################
 *** Steps 4.2 to 4.4 to be repeated everytime FSL is being used through Ubuntu ***
-##################################################################################
+###################################################################################
 
 ##################################################################################
 *** Steps 4.3 is to be repeated in Ubuntu everytime FSL is being used ***
